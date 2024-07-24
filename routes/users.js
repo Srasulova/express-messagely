@@ -1,10 +1,6 @@
-const jwt = require("jsonwebtoken");
 const express = require("express");
 const router = express.Router;
-
 const User = require("../models/user");
-const ExpressError = require("../expressError");
-const { SECRET_KEY } = require("../config");
 const { ensureLoggedIn, ensureCorrectUser } = require("../middleware/auth");
 
 /** GET / - get list of users.
